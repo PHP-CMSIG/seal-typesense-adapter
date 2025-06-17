@@ -101,10 +101,18 @@ final class TypesenseSearcher implements SearcherInterface
             $searchParams['highlight_end_tag'] = $search->highlightPostTag;
         }
 
+        $isGrouped = false;
+
+        if (null !== $search->distinct) {
+            $searchParams['group_by'] = $search->distinct;
+            $searchParams['group_limit'] = '1';
+            $isGrouped = true;
+        }
+
         $data = $this->client->collections[$search->index->name]->documents->search($searchParams);
 
         return new Result(
-            $this->hitsToDocuments($search->index, $data['hits'], $search->highlightFields),
+            $this->hitsToDocuments($search->index, $isGrouped ? $data['grouped_hits'][0]['hits'] : $data['hits'], $search->highlightFields),
             $data['found'] ?? null,
         );
     }
