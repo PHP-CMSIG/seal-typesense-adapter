@@ -98,7 +98,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'type' => 'string',
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet, // @phpstan-ignore-line
                 ],
                 $field instanceof Field\TextField => $fields[] = [
                     'name' => $name,
@@ -106,7 +106,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable,
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet,
                 ],
                 $field instanceof Field\BooleanField => $fields[] = [
                     'name' => $name,
@@ -114,7 +114,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet,
                 ],
                 $field instanceof Field\IntegerField => $fields[] = [
                     'name' => $name,
@@ -122,7 +122,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet,
                 ],
                 $field instanceof Field\DateTimeField => $fields[] = [
                     'name' => $name,
@@ -130,7 +130,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet,
                 ],
                 $field instanceof Field\FloatField => $fields[] = [
                     'name' => $name,
@@ -138,7 +138,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet,
                 ],
                 $field instanceof Field\GeoPointField => $fields[] = [
                     'name' => $name,
@@ -146,7 +146,7 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
-                    'facet' => $field->filterable,
+                    'facet' => $field->filterable || $field->facet, // @phpstan-ignore-line
                 ],
                 $field instanceof Field\ObjectField => $fields = [...$fields, ...$this->createObjectFields($name, $field)],
                 $field instanceof Field\TypedField => $fields = [...$fields, ...$this->createTypedFields($name, $field)],
