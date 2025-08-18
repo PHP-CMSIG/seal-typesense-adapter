@@ -75,7 +75,7 @@
         },
         {
             "name": "cmsig/seal",
-            "version": "0.12.0",
+            "version": "0.12.x-dev",
             "dist": {
                 "type": "path",
                 "url": "./../seal",
@@ -1029,12 +1029,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "a6d7bd9d081941523346d571d0407e3dde904058"
+                "reference": "b9cc8ee5176cacc9b680ecfffa1b67ef3016e2c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/a6d7bd9d081941523346d571d0407e3dde904058",
-                "reference": "a6d7bd9d081941523346d571d0407e3dde904058",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/b9cc8ee5176cacc9b680ecfffa1b67ef3016e2c1",
+                "reference": "b9cc8ee5176cacc9b680ecfffa1b67ef3016e2c1",
                 "shasum": ""
             },
             "require": {
@@ -1120,7 +1120,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-12T20:21:03+00:00"
+            "time": "2025-08-14T12:02:30+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -1207,12 +1207,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "3c2c95716bd121ae4c4410e9a31e873f86fa323e"
+                "reference": "3324bca1ff334c8807a3968882edb76ea708b955"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/3c2c95716bd121ae4c4410e9a31e873f86fa323e",
-                "reference": "3c2c95716bd121ae4c4410e9a31e873f86fa323e",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/3324bca1ff334c8807a3968882edb76ea708b955",
+                "reference": "3324bca1ff334c8807a3968882edb76ea708b955",
                 "shasum": ""
             },
             "require": {
@@ -1270,7 +1270,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-09T22:28:14+00:00"
+            "time": "2025-08-13T16:46:49+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1443,16 +1443,16 @@
         },
         {
             "name": "typesense/typesense-php",
-            "version": "v5.2.0-RC3",
+            "version": "v5.2.0-RC4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/typesense/typesense-php.git",
-                "reference": "0ed20f0a1d2144bd143b9637055256812fa56bf9"
+                "reference": "1fbf79e1c10a8fd4cc3df9c3cddbe158e93542f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/typesense/typesense-php/zipball/0ed20f0a1d2144bd143b9637055256812fa56bf9",
-                "reference": "0ed20f0a1d2144bd143b9637055256812fa56bf9",
+                "url": "https://api.github.com/repos/typesense/typesense-php/zipball/1fbf79e1c10a8fd4cc3df9c3cddbe158e93542f7",
+                "reference": "1fbf79e1c10a8fd4cc3df9c3cddbe158e93542f7",
                 "shasum": ""
             },
             "require": {
@@ -1510,7 +1510,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-15T16:56:02+00:00"
+            "time": "2025-08-15T15:21:26+00:00"
         }
     ],
     "packages-dev": [
@@ -1577,16 +1577,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.6.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "221b0d0fdf1369c71047ad1d18bb5880017bbc56"
+                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/221b0d0fdf1369c71047ad1d18bb5880017bbc56",
-                "reference": "221b0d0fdf1369c71047ad1d18bb5880017bbc56",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
+                "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
                 "shasum": ""
             },
             "require": {
@@ -1599,13 +1599,14 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^9.0"
             },
+            "default-branch": true,
             "bin": [
                 "bin/php-parse"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.x-dev"
                 }
             },
             "autoload": {
@@ -1629,9 +1630,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.1"
             },
-            "time": "2025-07-27T20:03:57+00:00"
+            "time": "2025-08-13T20:13:15+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -1754,16 +1755,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.85.1",
+            "version": "v3.86.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "00a3dad9505df669736aaa8c017e6cc74e46075a"
+                "reference": "b43770ec215a30afff187ac273da6b43575c0ae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/00a3dad9505df669736aaa8c017e6cc74e46075a",
-                "reference": "00a3dad9505df669736aaa8c017e6cc74e46075a",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/b43770ec215a30afff187ac273da6b43575c0ae3",
+                "reference": "b43770ec215a30afff187ac273da6b43575c0ae3",
                 "shasum": ""
             },
             "require": {
@@ -1800,9 +1801,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.85.1"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.86.0"
             },
-            "time": "2025-07-29T22:23:17+00:00"
+            "time": "2025-08-13T22:37:38+00:00"
         },
         {
             "name": "php-http/curl-client",
@@ -2358,12 +2359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "24dda24cf0123f75c29831b808cab5a0c2c96529"
+                "reference": "4b4ef24b22aff369af098fdf31e853d24d446ec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/24dda24cf0123f75c29831b808cab5a0c2c96529",
-                "reference": "24dda24cf0123f75c29831b808cab5a0c2c96529",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4b4ef24b22aff369af098fdf31e853d24d446ec9",
+                "reference": "4b4ef24b22aff369af098fdf31e853d24d446ec9",
                 "shasum": ""
             },
             "require": {
@@ -2459,7 +2460,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-13T06:52:37+00:00"
+            "time": "2025-08-17T06:08:40+00:00"
         },
         {
             "name": "rector/rector",
