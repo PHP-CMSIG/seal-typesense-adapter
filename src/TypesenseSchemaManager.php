@@ -142,13 +142,21 @@ final class TypesenseSchemaManager implements SchemaManagerInterface
                 ],
                 $field instanceof Field\GeoPointField => $fields[] = [
                     'name' => $name,
-                    'type' => $field->multiple ? 'geopoint[]' : 'geopoint',
+                    'type' => $field->multiple ? 'geopoint[]' : 'geopoint', // @phpstan-ignore-line
                     'optional' => true,
                     'sort' => $field->sortable,
                     'index' => $field->searchable || $field->filterable, // @phpstan-ignore-line
                     'facet' => $field->filterable || $field->facet, // @phpstan-ignore-line
                 ],
                 $field instanceof Field\ObjectField => $fields = [...$fields, ...$this->createObjectFields($name, $field)],
+                $field instanceof Field\JsonObjectField => $fields[] = [
+                    'name' => $name,
+                    'type' => $field->multiple ? 'string[]' : 'string', // @phpstan-ignore-line
+                    'optional' => true,
+                    'sort' => false,
+                    'index' => false,
+                    'facet' => false,
+                ],
                 $field instanceof Field\TypedField => $fields = [...$fields, ...$this->createTypedFields($name, $field)],
                 default => throw new \RuntimeException(\sprintf('Field type "%s" is not supported.', $field::class)),
             };
